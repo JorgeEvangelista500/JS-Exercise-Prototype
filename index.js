@@ -104,6 +104,7 @@ function Baby(name, age, favoriteToy) {
 }
 
 Baby.prototype = Object.create(Person.prototype)
+
 Baby.prototype.play = function (){
   return `Playing with ${this.favoriteToy}`
 }
@@ -112,10 +113,13 @@ Baby.prototype.play = function (){
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. Window binding
-  2. Implicit binding
-  3. 
-  4. 
+  1. Window binding - if there is no context given to this, it will return the window object  
+
+  2. Implicit binding- it gives objects methods, to the left of the dot is what "this" is refer to
+
+  3. Explicit binding- when and object used "this" then invoke a function with that object(.call)
+
+  4. New binding - when there is a function that was invoked with the new keyword, the "this" bind to the new objects.
 */
 
 
